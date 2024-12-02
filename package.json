@@ -1,0 +1,31 @@
+{
+  "name": "@kcsoft/node-red-jenkins",
+  "version": "1.0.0",
+  "description": "Node-RED node to call Jenkins methods",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "node-red": {
+    "version": ">=2.0.0",
+    "nodes": {
+      "jenkins": "jenkins.js",
+      "jenkins-connection": "jenkins-connection.js"
+    }
+  },
+  "author": {
+    "name": "kcsoft"
+  },
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kcsoft/node-red-jenkins"
+  },
+  "dependencies": {
+    "jenkins": "^1.1.0"
+  },
+  "keywords": [
+    "node-red",
+    "jenkins"
+  ]
+}
