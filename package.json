@@ -1,6 +1,6 @@
 {
-  "name": "@kcsoft/node-red-jenkins",
-  "version": "1.0.0",
+  "name": "@hammadrauf/node-red-jenkins",
+  "version": "1.0.18",
   "description": "Node-RED node to call Jenkins methods",
   "engines": {
     "node": ">=14.0.0",
@@ -10,7 +10,9 @@
     "version": ">=2.0.0",
     "nodes": {
       "jenkins": "jenkins.js",
-      "jenkins-connection": "jenkins-connection.js"
+      "jenkins-invoke-job": "jenkins-invoke-job.js",
+      "jenkins-connection": "jenkins-connection.js",
+      "jenkins-job-params": "jenkins-job-params.js"
     }
   },
   "author": {
@@ -19,10 +21,11 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kcsoft/node-red-jenkins"
+    "url": "https://github.com/hammadrauf/node-red-jenkins"
   },
   "dependencies": {
-    "jenkins": "^1.1.0"
+    "jenkins": "^1.1.0",
+    "jsdom": "^20.0.0"
   },
   "keywords": [
     "node-red",

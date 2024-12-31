@@ -1,0 +1,49 @@
+<script type="text/javascript">
+    RED.nodes.registerType('jenkins-invoke-job' ,{
+        category: 'jenkins',
+        color: '#a6bb5f',
+        defaults: {
+            name: {
+                value:'',
+            },
+            job: {
+                value:'',
+                type: 'jenkins-job-params',
+                required: true,
+            },
+            connection: {
+                value: '',
+                type: 'jenkins-connection',
+                required: true,
+            }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "jenkins-invoke-job.png",
+        label: function() {
+            return this.name || "jenkins-invoke-job";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="jenkins-invoke-job">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-connection"><i class="fa fa-plug"></i> Connection</label>
+        <input type="text" id="node-input-connection">
+    </div>
+    <div class="form-row">
+        <label for="node-input-job"><i class="fa fa-plug"></i> Job</label>
+        <input type="text" id="node-input-job">
+    </div>
+</script>
+
+<script type="text/html" data-help-name="jenkins-invoke-job">
+    <p>You can pass in <code>msg.method</code> and optional <code>msg.params</code> or specify a method/params in the configuration of the node.</p>
+    <p><code>msg.method</code> is the Jenkins API method to call - Hard coded to <code>job.config</code>.</p>
+    <p><code>msg.jobname</code> is an object containing the parameters to pass to the method. For example, <code>{"jobname": "MyJenkinsPipelineName"}</code>.</p>
+    <p>After execution, the <code>msg.payload</code> will contain the filtered result from XML, containing a list of structure - Jenkins Pipeline Parameter dataType, Name, and Default value (if exists).</p>
+</script>
