@@ -1,6 +1,6 @@
 {
-  "name": "@hammadrauf/node-red-jenkins",
-  "version": "1.0.18",
+  "name": "@kcsoft/node-red-jenkins",
+  "version": "1.0.1",
   "description": "Node-RED node to call Jenkins methods",
   "engines": {
     "node": ">=14.0.0",
@@ -21,7 +21,7 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/hammadrauf/node-red-jenkins"
+    "url": "https://github.com/kcsoft/node-red-jenkins"
   },
   "dependencies": {
     "jenkins": "^1.1.0",
